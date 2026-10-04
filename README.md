@@ -7,7 +7,7 @@ The website is a dependency-free static site deployed directly from this directo
 
 ## Homepage
 
-`index.html`, `styles.css`, and `script.js` are homepage-only; documentation pages do not load them. The homepage's animated hero canvas, trace console, scroll effects, and pointer effects follow the visitor's `prefers-reduced-motion` setting by default. The header/footer **Motion** toggle lets visitors override it, and the choice is stored in `localStorage` (`agent-rt-motion`). Any new animation must be disabled under `:root[data-motion="reduce"]`, and the page must stay fully readable without JavaScript. Benchmark figures and product claims on the homepage must stay aligned with the repository documentation.
+`index.html`, `styles.css`, and `script.js` are homepage-only; documentation pages do not load them. The homepage's animated hero canvas, trace console, scroll effects, and pointer effects are on by default, regardless of the OS `prefers-reduced-motion` setting. The header/footer **Motion** toggle (with a hover/focus tooltip) lets visitors turn them off, and the choice is stored in `localStorage` (`agent-rt-motion`). Any new animation must be disabled under `:root[data-motion="reduce"]`, and the page must stay fully readable without JavaScript. Benchmark figures and product claims on the homepage must stay aligned with the repository documentation.
 
 ## Documentation site
 

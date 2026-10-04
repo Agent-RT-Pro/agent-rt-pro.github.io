@@ -3,7 +3,7 @@
   root.classList.add("js");
 
   if (!root.dataset.motion) {
-    root.dataset.motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "reduce" : "full";
+    root.dataset.motion = "full";
   }
   const reducedMotion = root.dataset.motion === "reduce";
   const finePointer = window.matchMedia("(pointer: fine)").matches;
@@ -23,12 +23,13 @@
   const toast = document.getElementById("copy-toast");
 
   /* ---------------------------------------------------------------
-     Motion toggle: follows the OS preference until the visitor
-     chooses; the choice is remembered for this browser only.
+     Motion toggle: animations are on by default; the visitor's
+     choice is remembered for this browser only.
      --------------------------------------------------------------- */
   document.querySelectorAll("[data-motion-toggle]").forEach((button) => {
     button.setAttribute("aria-pressed", String(!reducedMotion));
     button.setAttribute("aria-label", reducedMotion ? "Turn animations on" : "Turn animations off");
+    button.dataset.tooltip = reducedMotion ? "Animations off — click to turn on" : "Animations on — click to turn off";
     button.addEventListener("click", () => {
       try {
         window.localStorage.setItem("agent-rt-motion", reducedMotion ? "full" : "reduce");

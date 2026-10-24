@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>Agent RT Features, Defaults &amp; Usage Reference</title>
   <meta name="description" content="Complete Agent RT reference for defaults and usage: loop, tools, guardrails, permissions, memory, orchestration, sandboxing, retrieval, observability, and APIs.">
   <meta name="author" content="Pro-GenAI">
@@ -22,11 +23,12 @@
   <meta name="twitter:image" content="https://agent-rt-pro.github.io/og-image.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://agent-rt-pro.github.io/docs/reference/features-defaults.html#page","url":"https://agent-rt-pro.github.io/docs/reference/features-defaults.html","name":"Agent RT Features, Defaults & Usage Reference","headline":"Agent RT Features, Defaults & Usage Reference","description":"Complete Agent RT reference for defaults and usage: loop, tools, guardrails, permissions, memory, orchestration, sandboxing, retrieval, observability, and APIs.","inLanguage":"en","dateModified":"2026-10-04","isPartOf":{"@id":"https://agent-rt-pro.github.io/#website"},"about":{"@id":"https://agent-rt-pro.github.io/#software"},"publisher":{"@id":"https://agent-rt-pro.github.io/#organization"}},{"@type":"BreadcrumbList","@id":"https://agent-rt-pro.github.io/docs/reference/features-defaults.html#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Agent RT","item":"https://agent-rt-pro.github.io/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://agent-rt-pro.github.io/docs/"},{"@type":"ListItem","position":3,"name":"Reference"},{"@type":"ListItem","position":4,"name":"Features & defaults","item":"https://agent-rt-pro.github.io/docs/reference/features-defaults.html"}]}]}</script>
   <meta name="theme-color" content="#07090d"><meta name="color-scheme" content="dark">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="../../docs/docs.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/github-dark-dimmed.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js" defer></script>
+  <link rel="stylesheet" href="../../docs/vendor/github-dark-dimmed.min.css">
+  <script src="../../docs/vendor/highlight.min.js" defer></script>
   <script src="../../docs/docs.js" defer></script>
 </head>
 <body data-doc-section="reference">
@@ -36,9 +38,9 @@
   <span class="docs-label">Documentation</span>
   <nav class="header-links" aria-label="Global"><a href="../../">Home</a><a href="../">Docs</a><a href="https://github.com/Pro-GenAI/Agent-RT">GitHub ↗</a></nav>
 </div></header>
-<div class="mobile-nav"><details><summary>Documentation menu</summary><div class="mobile-links"><a href="../">Overview</a><a href="../getting-started/installation.html">Installation</a><a href="../getting-started/quickstart.html">Quickstart</a><a href="../concepts/runtime.html">Runtime model</a><a href="../concepts/tools-policy.html">Tools & policy</a><a href="../concepts/state-memory.html">State & memory</a><a href="../guides/migration.html">Migration</a><a href="../guides/production.html">Production patterns</a><a href="../guides/vector-databases.html">Vector databases</a><a href="../guides/runtime-guide.html">Runtime guide</a><a href="./features-defaults.html" aria-current="page">Features & defaults</a><a href="./architecture.html">Architecture</a><a href="./development.html">Development</a></div></details></div>
+<div class="mobile-nav"><details><summary>Documentation menu</summary><div class="mobile-links"><a href="../">Overview</a><a href="../getting-started/installation.html">Installation</a><a href="../getting-started/quickstart.html">Quickstart</a><a href="../concepts/runtime.html">Runtime model</a><a href="../concepts/tools-policy.html">Tools & policy</a><a href="../concepts/state-memory.html">State & memory</a><a href="../guides/migration.html">Migration</a><a href="../guides/production.html">Production patterns</a><a href="../guides/vector-databases.html">Vector databases</a><a href="../guides/runtime-guide.html">Runtime guide</a><a href="./features-defaults.html" aria-current="page">Features & defaults</a><a href="./architecture.html">Architecture</a><a href="./development.html">Development</a><a href="./privacy-terms.html">Privacy &amp; terms</a></div></details></div>
 <div class="docs-shell">
-<aside class="sidebar" aria-label="Documentation navigation"><a class="sidebar-home" href="../">← Documentation home</a><div class="nav-group"><h2>Getting started</h2><a href="../getting-started/installation.html">Installation</a><a href="../getting-started/quickstart.html">Quickstart</a></div><div class="nav-group"><h2>Core concepts</h2><a href="../concepts/runtime.html">Runtime model</a><a href="../concepts/tools-policy.html">Tools & policy</a><a href="../concepts/state-memory.html">State & memory</a></div><div class="nav-group"><h2>Guides</h2><a href="../guides/migration.html">Migration</a><a href="../guides/production.html">Production patterns</a><a href="../guides/vector-databases.html">Vector databases</a><a href="../guides/runtime-guide.html">Runtime guide</a></div><div class="nav-group"><h2>Reference</h2><a href="./features-defaults.html" aria-current="page">Features & defaults</a><a href="./architecture.html">Architecture</a><a href="./development.html">Development</a></div></aside>
+<aside class="sidebar" aria-label="Documentation navigation"><a class="sidebar-home" href="../">← Documentation home</a><div class="nav-group"><h2>Getting started</h2><a href="../getting-started/installation.html">Installation</a><a href="../getting-started/quickstart.html">Quickstart</a></div><div class="nav-group"><h2>Core concepts</h2><a href="../concepts/runtime.html">Runtime model</a><a href="../concepts/tools-policy.html">Tools & policy</a><a href="../concepts/state-memory.html">State & memory</a></div><div class="nav-group"><h2>Guides</h2><a href="../guides/migration.html">Migration</a><a href="../guides/production.html">Production patterns</a><a href="../guides/vector-databases.html">Vector databases</a><a href="../guides/runtime-guide.html">Runtime guide</a></div><div class="nav-group"><h2>Reference</h2><a href="./features-defaults.html" aria-current="page">Features & defaults</a><a href="./architecture.html">Architecture</a><a href="./development.html">Development</a><a href="./privacy-terms.html">Privacy &amp; terms</a></div></aside>
 <main class="docs-main" id="main"><article class="content">
 <div class="breadcrumbs"><a href="../">Docs</a><span>/</span>Reference<span>/</span>Features &amp; defaults</div>
 <section class="section-intro"><span class="eyebrow">Reference</span><h1 class="doc-title">Features, defaults<br>&amp; usage</h1><p class="doc-lede">A self-contained map of Agent RT. Use this page to understand what the runtime does, what happens by default, what requires explicit configuration, and which object or setting controls each capability.</p></section>
@@ -60,8 +62,8 @@
 <tr><td>Assistant output role</td><td>Required</td><td>Change <code>require_assistant_output</code> in the boundary policy.</td></tr>
 <tr><td>Model-backed tool-input guardrail</td><td>Off unless enabled</td><td>Enable it on <code>ToolRegistry</code>. The default model/backend is <code>agent-action-guard</code>.</td></tr>
 <tr><td>Prompt-injection defense object</td><td>Created by default by <code>AgentLoop</code></td><td>Inject a custom <code>PromptInjectionDefense</code>.</td></tr>
-<tr><td>Sandbox network mode</td><td><code>none</code></td><td>Set <code>AGENT_RT_SANDBOX_NETWORK_MODE</code> to <code>allowlist</code> or <code>unrestricted</code> where the backend can enforce it.</td></tr>
-<tr><td>Sandbox backend selection</td><td><code>native</code> when env selection is unset</td><td>Use <code>AGENT_RT_SANDBOX_BACKEND</code>; supported backends include Docker and optional managed integrations.</td></tr>
+<tr><td>Sandbox network mode</td><td><code>none</code></td><td>Set <code>agent_rt_settings.sandbox.network_mode</code> to <code>allowlist</code> or <code>unrestricted</code> where the backend can enforce it.</td></tr>
+<tr><td>Sandbox backend selection</td><td><code>native</code> when the config does not select one</td><td>Use <code>agent_rt_settings.sandbox.backend</code>; supported backends include Docker and optional managed integrations.</td></tr>
 <tr><td>Memory, persistence, schedulers, queues</td><td>Explicitly configured</td><td>Inject the relevant store/manager; Agent RT does not silently persist application data.</td></tr>
 <tr><td>Permissions and approvals</td><td>Explicitly configured where your application needs them</td><td>Use <code>PermissionEngine</code>, capability grants, <code>ApprovalManager</code>, and policy rules.</td></tr>
 <tr><td>OpenAI-compatible base URL</td><td><code>https://api.openai.com/v1</code></td><td>Configure the provider/base URL or environment.</td></tr>
@@ -73,7 +75,6 @@
 
 <h3>Step 1 — run a basic agent in Python</h3>
 <pre><code class="language-python">import asyncio
-import os
 
 from agent_rt import (
     AgentConfig,
@@ -81,15 +82,15 @@ from agent_rt import (
     ContentPart,
     ModelMessage,
     ModelSettings,
+    load_config,
     load_model,
 )
 
 
 async def main():
-    model = os.environ.get("OPENAI_MODEL") or os.environ.get("ANTHROPIC_MODEL")
-    if not model:
-        raise RuntimeError("Set OPENAI_MODEL or ANTHROPIC_MODEL")
-    provider = load_model()
+    config = load_config()  # agent-rt.yaml, ~/.agent-rt/config.yaml, or an explicit path
+    model = config.default_model
+    provider = load_model(config)
 
     agent = AgentConfig(
         name="basic",
@@ -122,13 +123,13 @@ async def main():
 asyncio.run(main())</code></pre>
 
 <h3>Step 1 — the same agent in TypeScript</h3>
-<pre><code class="language-javascript">const { AgentLoop, loadModel } = require("agent-rt");
+<pre><code class="language-javascript">const { AgentLoop, loadConfig, loadModel } = require("agent-rt");
 
 async function main() {
-  const model = process.env.OPENAI_MODEL || process.env.ANTHROPIC_MODEL;
-  if (!model) throw new Error("Set OPENAI_MODEL or ANTHROPIC_MODEL");
+  const config = await loadConfig(); // agent-rt.yaml, ~/.agent-rt/config.yaml, or an explicit path
+  const model = config.settings.default_model ?? config.models[0].modelName;
 
-  const provider = await loadModel();
+  const provider = await loadModel(config);
 
   const agent = {
     name: "basic",
@@ -160,7 +161,7 @@ main();</code></pre>
 
 <h3>Step 2 — add a tool</h3>
 <p>Tools are schemas plus handlers. The model only proposes the call; Agent RT validates and dispatches it.</p>
-<pre><code class="language-python">from agent_rt import AgentLoop, ToolDefinition, ToolRegistry, load_model
+<pre><code class="language-python">from agent_rt import AgentLoop, ToolDefinition, ToolRegistry, load_config, load_model
 
 registry = ToolRegistry()
 
@@ -183,9 +184,9 @@ registry.register(
     handler=weather,
 )
 
-loop = AgentLoop(load_model(), tool_registry=registry)</code></pre>
+loop = AgentLoop(load_model(load_config()), tool_registry=registry)</code></pre>
 
-<pre><code class="language-javascript">const { AgentLoop, ToolRegistry, loadModel } = require("agent-rt");
+<pre><code class="language-javascript">const { AgentLoop, ToolRegistry, loadConfig, loadModel } = require("agent-rt");
 
 const registry = new ToolRegistry();
 
@@ -210,7 +211,7 @@ registry.register(
   },
 );
 
-const provider = await loadModel();
+const provider = await loadModel(config);
 const loop = new AgentLoop(provider, undefined, registry);</code></pre>
 
 <h3>Step 3 — stream output</h3>
@@ -358,11 +359,11 @@ result = loop.run(agent, messages)
 
 <h2>4. Tools and tool registry</h2>
 <p>A tool is a runtime capability with a name, description, argument schema, optional output schema, side-effect classification, timeout/resource information, and a handler. <code>ToolRegistry</code> provides registration, lookup, namespaces, enable/disable, replacement, deferred loading, contextual/async handlers, validation, guardrails, lifecycle hooks, and dependency-injected execution context.</p>
-<p><strong>Execution order:</strong> visibility → model call → tool-call transform → tool-input guardrails → argument validation → permissions/capability checks → approvals/policy → handler execution → tool-output guardrails → result marshaling → model continuation.</p>
+<p><strong>Execution order:</strong> visibility → model call → tool lookup/enabled check → permissions/capability checks → pre-call transform → action blockers → tool-input guardrails → argument validation → rate limits/dry-run → approvals/policy → handler execution → tool-output guardrails → result marshaling → model continuation.</p>
 <div class="note"><strong>Why visibility and dispatch are separate</strong>Hiding a tool from the model reduces capability exposure, but dispatch still re-checks execution policy. A stale or malformed call cannot rely on having seen an older schema.</div>
 
 <h2>5. Tool selection, visibility, and discovery</h2>
-<p><code>ToolSelectionPolicy</code> can allow, deny, require, or prefer tools. Runtime visibility filters can narrow the visible set per turn. Deferred tools keep schemas out of context until loaded. <code>CapabilityCatalog</code> provides cross-kind capability discovery, and Decision models can be used to select/rank capabilities without making the main model consume the entire catalog.</p>
+<p><code>ToolSelectionPolicy</code> can allow, deny, require, or prefer tools. Runtime visibility filters can narrow the visible set per turn. <code>Toolbase</code> combines enabled local tools, materialized deferred tools, and discovered MCP tools into a safety-screened internal catalog. The main model receives the relevance-selected subset plus <code>tool_search</code>; search results can promote additional safe tools on later turns without bypassing capability grants, prompt-injection filtering, tool-selection policy, context isolation, or execution-time registry checks. <code>make_decision_toolbase</code> / <code>makeDecisionToolbase</code> use Decision models for safety screening and relevance selection, while <code>CapabilityCatalog</code> provides the bounded search index.</p>
 <p><strong>Use it when:</strong> your application has many tools, tenant-specific capabilities, task phases, specialist agents, or expensive schemas that should not appear on every turn.</p>
 
 <h2>6. Guardrails: four different boundaries</h2>
@@ -390,6 +391,17 @@ loop = AgentLoop(provider, boundary_guardrail_policy=policy)
 # replaces it with its own input/output guardrails:
 loop = AgentLoop(provider, boundary_guardrail_policy=None)</code></pre>
 
+<h3>Composable action blockers</h3>
+<p><code>ToolRegistry</code> can run multiple deny-only action blockers before tool-input guardrails, validation, approvals, and handler execution. The first rejection raises <code>ActionBlockedError</code>. Built-ins include <code>RuleBasedActionBlocker</code>, Agent Action Guard adapters, and Decision-model adapters for Laya/Jev-compatible providers; custom functions/callables and objects exposing <code>check</code> are also supported.</p>
+<p>The default rule set blocks <code>sudo</code>, <code>rm -rf</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git reset --hard</code>, <code>git merge</code>, and <code>git rebase</code>. Rules are configurable and match command prefixes at shell-command segment boundaries rather than arbitrary substrings.</p>
+<pre><code class="language-python">from agent_rt import RuleBasedActionBlocker, ToolRegistry
+
+registry = ToolRegistry(
+    action_blockers=(
+        RuleBasedActionBlocker(["sudo", "rm -rf", "git push"]),
+        my_custom_blocker,
+    ),
+)</code></pre>
 <h3>Agent Action Guard: the default model-backed tool-input model</h3>
 <p>Agent Action Guard protects <em>tool calls</em>, not raw user messages. The integration is optional because it adds a model dependency. When model-backed tool-input screening is enabled, <code>DEFAULT_TOOL_INPUT_GUARDRAIL_MODEL</code> is <code>agent-action-guard</code>. Screening happens before argument validation and before the tool handler can cause side effects.</p>
 <pre><code class="language-python"># Python
@@ -520,15 +532,14 @@ print(len(snapshot.messages))</code></pre>
 
 <h2>16. Sandboxed shell and code execution</h2>
 <p><code>SandboxBackend</code> and <code>SandboxSession</code> keep generated execution behind an injected isolation boundary. Backends can expose shell tools and language runtimes while carrying explicit workspace, environment, package state, resource limits, network policy, snapshots, and restore/clone behavior.</p>
-<p>Environment-driven sandbox selection defaults to <code>native</code> when <code>AGENT_RT_SANDBOX_BACKEND</code> is unset; supported deployments can select Docker or optional managed backends. Values that attempt to disable sandboxing through the backend selector are rejected. The native backend is POSIX-oriented and requires an explicitly restricted identity; use a backend capable of enforcing the isolation dimensions you require.</p>
+<p>Config-driven sandbox selection defaults to <code>native</code> when <code>agent_rt_settings.sandbox.backend</code> is unset; supported deployments can select Docker or optional managed backends. Values that attempt to disable sandboxing through the backend selector are rejected. The native backend is POSIX-oriented and requires an explicitly restricted identity; use a backend capable of enforcing the isolation dimensions you require.</p>
 <p>Network mode defaults to <code>none</code>. Allowlists and unrestricted access require explicit configuration, and backends that cannot enforce a requested network policy fail closed rather than silently weakening it.</p>
-<pre><code class="language-bash"># Native sandbox: use a restricted OS identity.
-export AGENT_RT_SANDBOX_BACKEND=native
-export AGENT_RT_SANDBOX_UID=1234
-export AGENT_RT_SANDBOX_GID=1235
-
-# Network access is disabled by default.
-export AGENT_RT_SANDBOX_NETWORK_MODE=none</code></pre>
+<pre><code class="language-yaml">agent_rt_settings:
+  sandbox:
+    backend: native      # use a restricted OS identity
+    uid: 1234
+    gid: 1235
+    network_mode: none   # network access is disabled by default</code></pre>
 <pre><code class="language-python">from agent_rt import (
     SandboxCommand,
     SandboxResourceLimits,
@@ -551,7 +562,7 @@ print(result.exit_code)
 print(result.stdout.decode())</code></pre>
 
 <h2>17. Retrieval, browser, computer, multimodal, and realtime interfaces</h2>
-<p><code>RetrievalRegistry</code> normalizes web, enterprise, file, knowledge, and database search behind one result contract. Browser and computer sessions provide controlled navigation/search/form/download and screenshot/pointer/keyboard capabilities. Multimodal messages support text, image, PDF, audio, video, document, file, and JSON parts. Realtime sessions cover low-latency audio/text events, speech turn markers, completion, interruption, and cleanup.</p>
+<p><code>RetrievalRegistry</code> normalizes web, enterprise, file, knowledge, and database search behind one result contract and can run an injected <code>RetrievalReranker</code> after provider retrieval. Python <code>reranker_k</code> and TypeScript <code>rerankerK</code> optionally cap the reranked sequence; if omitted, the reranker itself has no top-k cap. The normal retrieval query limit is still applied to the final registry result. <code>DecisionRetrievalReranker</code> provides the built-in Decision-model implementation. Browser and computer sessions provide controlled navigation/search/form/download and screenshot/pointer/keyboard capabilities. Multimodal messages support text, image, PDF, audio, video, document, file, and JSON parts. Realtime sessions cover low-latency audio/text events, speech turn markers, completion, interruption, and cleanup.</p>
 <pre><code class="language-python">from agent_rt import RetrievalQuery, RetrievalRegistry, RetrievalResult
 
 class KnowledgeBase:
@@ -572,7 +583,7 @@ results = await retrieval.search(
 )</code></pre>
 
 <h2>18. Vector databases</h2>
-<p>The project includes provider-neutral vector-store support and compatibility surfaces for Chroma, Milvus, Pinecone, Qdrant, and Weaviate, including environment-driven switching and LangChain/LlamaIndex-compatible imports. See the <a href="../guides/vector-databases.html">vector database guide</a> for concrete setup.</p>
+<p>The project supports Chroma, Milvus, Pinecone, Qdrant, and Weaviate HTTP adapters and hosted Bedrock Knowledge Bases retrieval (optional AWS SDK), with YAML configuration, lazy initialization, and LangChain/LlamaIndex-compatible imports. See the <a href="../guides/vector-databases.html">vector database guide</a> for concrete setup.</p>
 
 <h2>19. Provider routing and Decision models</h2>
 <p>Model aliases, fallback chains, routing policies, cost/latency-aware selection, and provider-neutral metadata let applications select a generation model without rewriting the loop. Decision models—including Laya and other Jev-compatible models—can be used for bounded routing/selection tasks such as capability choice.</p>
@@ -600,7 +611,7 @@ loop = AgentLoop(
 )</code></pre>
 
 <h2>22. Observability, auditing, privacy, tokens, and cost</h2>
-<p>Tracing records task/agent/turn/model/tool/subagent/guardrail/queue/remote spans. Structured logging supports privacy redaction before persistence. Runtime metrics cover latency, throughput, errors, retries, queue time, and completion. Token and cost ledgers can attribute usage to users, tenants, tasks, agents, models, tools, storage, compute, and external services.</p>
+<p>Tracing records task/agent/turn/model/tool/subagent/guardrail/queue/remote spans. Structured logging supports privacy protection before persistence: secret-like keys are redacted, while <code>PIIMorpher</code> deterministically substitutes detected PII with synthetic values so repeated values remain correlated without retaining plaintext. The lookup map stores only a short SHA-256+MD5 fingerprint to fake-data mapping; set <code>AGENT_RT_DISABLE_PII_MORPHER=true</code> to disable morphing. Runtime metrics cover latency, throughput, errors, retries, queue time, and completion. Token and cost ledgers can attribute usage to users, tenants, tasks, agents, models, tools, storage, compute, and external services.</p>
 <p>Audit trails record actor-attributed request/authorization/execution outcomes. Retention-aware event storage supports TTL, purge, archival, ephemeral runs, and logging suppression where policy requires it.</p>
 <pre><code class="language-python">from agent_rt import TraceRecorder
 
@@ -631,7 +642,7 @@ agent_span = traces.start(
 <p>IDE integration can pass current-file, selection, diagnostics, and diff context into workspace operations. Chat bridges preserve channel identity and thread state. Approval presentation provides standardized consequence/diff/allow-or-deny UI data.</p>
 
 <h2>25. Compatibility and migration</h2>
-<p>Compatibility modules support common LangChain and LlamaIndex integration patterns, while OpenAI- and Anthropic-compatible HTTP surfaces ease application migration. Use compatibility layers to keep surrounding application code familiar while moving policy, tools, limits, state, and execution control into Agent RT.</p>
+<p>Compatibility modules support common LangChain and LlamaIndex integration patterns, while OpenAI- and Anthropic-compatible HTTP surfaces ease application migration. Use compatibility layers to keep surrounding application code familiar while moving policy, tools, limits, state, and execution control into Agent RT. Migration field testing is ongoing; 65+ third-party repositories currently pass their test suites both before and after migration.</p>
 
 <h2>26. Production deployment checklist</h2>
 <div class="table-wrap"><table><thead><tr><th>Before production</th><th>Recommended action</th></tr></thead><tbody>
@@ -653,6 +664,6 @@ agent_span = traces.start(
 
 <div class="page-nav"><a class="next-link" href="./architecture.html"><small>Related</small><strong>Architecture</strong></a><a class="next-link" href="../guides/production.html"><small>Next</small><strong>Production patterns →</strong></a></div>
 </article>
-<footer class="docs-footer">Agent RT documentation · MIT licensed · <a href="https://github.com/Pro-GenAI/Agent-RT">Source on GitHub</a></footer></main>
+<footer class="docs-footer">Agent RT documentation · © 2026 Pro-GenAI · MIT licensed · <a href="https://github.com/Pro-GenAI/Agent-RT">Source on GitHub</a> · <a href="../reference/privacy-terms.html">Privacy &amp; terms</a><br>No cookies, analytics, or third-party requests. Product names mentioned are trademarks of their owners; Agent RT is not affiliated with them.</footer></main>
 </div>
 </body></html>
